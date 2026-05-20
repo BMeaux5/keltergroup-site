@@ -15,9 +15,7 @@
   letter-spacing: -0.04em;
   line-height: 0.95;
   color: #fff;
-}/* =====================
-   PAGE HERO SUBTEXT
-   ===================== */
+}
 .page-hero-sub {
   font-size: 18px;
   font-weight: 300;
@@ -75,91 +73,4 @@
   max-width: 1100px;
   margin: 0 auto;
 }
-.svc-section-num {
-  font-size: 48px;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  color: var(--slate-light);
-  opacity: 0.4;
-  line-height: 1;
-  margin-bottom: 8px;
-}
-.svc-section-title {
-  font-size: clamp(26px,3vw,40px);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  color: var(--text);
-  margin-bottom: 20px;
-  line-height: 1.1;
-}
-.svc-section-lead {
-  font-size: 18px;
-  font-weight: 400;
-  color: var(--text);
-  line-height: 1.7;
-  margin-bottom: 20px;
-}
-.svc-section-content p {
-  font-size: 15px;
-  font-weight: 300;
-  color: var(--text-mid);
-  line-height: 1.8;
-  margin-bottom: 18px;
-}
-.svc-section-details {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  margin-top: 40px;
-  padding-top: 32px;
-  border-top: 1px solid var(--border);
-}
-.svc-detail-title {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--slate);
-  margin-bottom: 16px;
-}
-.svc-detail-block ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.svc-detail-block ul li {
-  font-size: 13px;
-  font-weight: 300;
-  color: var(--text-mid);
-  line-height: 1.5;
-  padding-left: 16px;
-  position: relative;
-}
-.svc-detail-block ul li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 8px;
-  width: 5px;
-  height: 5px;
-  background: var(--slate);
-  border-radius: 50%;
-}
-
-/* NAV ACTIVE */
-.nav-links a.active { color: var(--slate-dark); }
-
-/* =====================
-   RESPONSIVE
-   ===================== */
-@media (max-width: 900px) {
-  .page-hero { padding: 100px 24px 60px; }
-  .svc-nav { padding: 0 16px; top: 68px; }
-  .svc-nav a { padding: 14px 12px; font-size: 10px; }
-  .svc-section { padding: 60px 24px; }
-  .svc-section-inner { grid-template-columns: 1fr; gap: 24px; }
-  .svc-section-num { font-size: 32px; }
-  .svc-section-details { grid-template-columns: 1fr; gap: 28px; }
-  .cta-sec { padding: 60px 24px; }
-}
+.svc-section-n
