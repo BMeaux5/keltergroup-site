@@ -1,4 +1,21 @@
 /* =====================
+   PAGE HERO
+   ===================== */
+.page-hero {
+  background: var(--slate-dark);
+  padding: 140px 48px 80px;
+  border-bottom: 3px solid var(--slate);
+}
+.page-hero-inner { max-width: 800px; }
+.page-hero .eyebrow { color: rgba(255,255,255,0.4); margin-bottom:16px; }
+.page-hero .eyebrow::before { background: rgba(255,255,255,0.3); }
+.page-title {
+  font-size: clamp(42px,6vw,80px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  color: #fff;
+}/* =====================
    PAGE HERO SUBTEXT
    ===================== */
 .page-hero-sub {
