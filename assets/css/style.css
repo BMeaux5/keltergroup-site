@@ -94,11 +94,13 @@ nav {
 .hero-top { margin-top:28px; }
 .hero-tag {
   font-size:10px; font-weight:600; letter-spacing:0.28em;
-  text-transform:uppercase; color:var(--slate); margin-bottom:20px;
+  text-transform:uppercase; color:var(--slate);
+  margin-top:20px; margin-bottom:28px;
   display:flex; align-items:center; gap:10px;
 }
 .hero-tag::before {
   content:''; display:block; width:24px; height:2px; background:var(--slate);
+}
 }
 .hero-lockup {
   display:flex; align-items:center; gap:28px; margin-bottom:48px;
