@@ -263,11 +263,11 @@ nav {
 }
 .word-item {
   font-size: clamp(36px,5vw,68px); font-weight:700; letter-spacing:-0.03em;
-  color:transparent; -webkit-text-stroke:1.5px rgba(0,0,0,0.13);
+  color:rgba(0,0,0,0.15);
   white-space:nowrap; padding:0 36px;
   display:flex; align-items:center; gap:36px;
 }
-.word-item.on { color:var(--slate-dark); -webkit-text-stroke:none; }
+.word-item.on { color:var(--slate-dark); }
 .word-item::after {
   content:'·'; color:var(--slate); -webkit-text-stroke:none; font-size:36px;
 }
