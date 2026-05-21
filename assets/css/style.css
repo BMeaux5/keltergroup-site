@@ -101,7 +101,6 @@ nav {
 .hero-tag::before {
   content:''; display:block; width:24px; height:2px; background:var(--slate);
 }
-}
 .hero-lockup {
   display: flex;
   flex-direction: row;
