@@ -88,7 +88,7 @@ nav {
 .hero {
   padding: 100px 48px 0;
   background: var(--cream);
-  min-height: 100vh;
+  min-height: auto;
   display: flex; flex-direction:column; justify-content:space-between;
 }
 .hero-top { margin-top:28px; }
@@ -116,7 +116,8 @@ nav {
   font-weight:700; letter-spacing:-0.05em; line-height:0.88; color:var(--text);
 }
 .hero-mid {
-  padding: 60px 0 40px;
+  padding: 40px 0 40px;
+  margin-top: 32px;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
