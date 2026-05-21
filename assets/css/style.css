@@ -259,7 +259,7 @@ nav {
   border-top:1px solid var(--border); border-bottom:1px solid var(--border);
 }
 .word-track {
-  display:flex; animation:scroll 22s linear infinite; width:max-content;
+  display:flex; width:max-content;
 }
 .word-item {
   font-size: clamp(36px,5vw,68px); font-weight:700; letter-spacing:-0.03em;
