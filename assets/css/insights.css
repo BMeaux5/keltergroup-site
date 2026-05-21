@@ -287,6 +287,82 @@
 .article-back:hover { color: var(--slate-dark); }
 
 /* =====================
+   COMPARISON TABLE
+   ===================== */
+.article-comparison {
+  margin: 32px 0;
+  overflow-x: auto;
+}
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.comparison-table th {
+  background: var(--slate-dark);
+  color: #fff;
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.comparison-table th:first-child {
+  width: 140px;
+}
+.comparison-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--text-mid);
+  vertical-align: top;
+  line-height: 1.6;
+}
+.comparison-table tr:nth-child(even) td {
+  background: var(--cream);
+}
+.row-label {
+  font-weight: 600 !important;
+  color: var(--text) !important;
+  font-size: 11px !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* =====================
+   EXAMPLE CARDS
+   ===================== */
+.article-examples {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 32px 0;
+}
+.example-card {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  padding: 24px;
+}
+.example-role {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-bottom: 12px;
+}
+.example-card p {
+  font-size: 13px !important;
+  font-weight: 300 !important;
+  color: var(--text-mid) !important;
+  line-height: 1.7 !important;
+  margin: 0 !important;
+}
+
+/* =====================
    RESPONSIVE
    ===================== */
 @media (max-width: 900px) {
