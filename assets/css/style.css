@@ -103,7 +103,7 @@ nav {
 }
 }
 .hero-lockup {
-  display:flex; align-items:center; gap:28px; margin-bottom:48px;
+  display:flex; align-items:center; gap:28px; margin-bottom: 0;
 }
 .hero-lockup-logo {
   height: clamp(60px,9vw,120px); width:auto; flex-shrink:0;
