@@ -320,6 +320,10 @@ nav {
   position: relative;
   z-index: 1;
 }
+.about-img-wrap {
+  position:relative;
+  display:inline-block;
+}
 .about-creds {
   display:flex; flex-direction:column; gap:10px; margin:22px 0 30px;
 }
