@@ -309,16 +309,19 @@ nav {
 }
 .about-img-wrap { position:relative; }
 .about-img-wrap::after {
-  content:''; position:absolute; bottom:-14px; right:-14px;
+  content:''; position:absolute;
+  bottom:-12px; right:-12px;
   width:65%; height:55%;
-  border:1.5px solid var(--slate-light); border-radius:2px; opacity:0.35;
-  z-index: 0;
+  border:1.5px solid var(--slate-light);
+  border-radius:2px; opacity:0.35;
+  z-index:0;
 }
 .about-img {
   width:100%; max-width:440px; height:520px;
-  object-fit:cover; object-position:center top; border-radius:2px;
-  position: relative;
-  z-index: 1;
+  object-fit:cover; object-position:center top;
+  border-radius:2px;
+  position:relative;
+  z-index:1;
 }
 .about-img-wrap {
   position:relative;
