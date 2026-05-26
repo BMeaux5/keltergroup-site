@@ -199,16 +199,9 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+ <script src="assets/js/main.js"></script>
   <script>
-    // ============================================
-    // REPLACE THIS WITH YOUR ACTUAL API KEY
-  const response = await fetch('https://misty-silence-5354.brandon-morgan-da0.workers.dev', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-    // ============================================
+    const WORKER_URL = 'https://misty-silence-5354.brandon-morgan-da0.workers.dev';
 
     const answers = {};
     let currentQuestion = 1;
@@ -225,14 +218,12 @@
 
     const answerTexts = {};
 
-    // Start button
     document.getElementById('startBtn').addEventListener('click', () => {
       document.getElementById('assessmentIntro').style.display = 'none';
       document.getElementById('assessmentQuestions').style.display = 'block';
       updateProgress();
     });
 
-    // Option buttons
     document.querySelectorAll('.option-btn').forEach(btn => {
       btn.addEventListener('click', function() {
         const qBlock = this.closest('.question-block');
@@ -243,11 +234,9 @@
         answers[qNum] = value;
         answerTexts[qNum] = text;
 
-        // Highlight selected
         qBlock.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
         this.classList.add('selected');
 
-        // Auto advance after brief delay
         setTimeout(() => {
           if (qNum < totalQuestions) {
             document.getElementById(`q${qNum}`).style.display = 'none';
@@ -275,27 +264,23 @@
       const maxScore = totalQuestions * 4;
       const pct = (totalScore / maxScore) * 100;
 
-      let noiseLevel, noiseLabelText, noiseColor;
+      let noiseLabelText, noiseColor;
       if (pct >= 70) {
-        noiseLevel = 'low';
         noiseLabelText = 'Low Noise';
         noiseColor = '#2E7D4F';
       } else if (pct >= 45) {
-        noiseLevel = 'moderate';
         noiseLabelText = 'Moderate Noise';
         noiseColor = '#B8860B';
       } else {
-        noiseLevel = 'high';
         noiseLabelText = 'High Noise';
         noiseColor = '#C0392B';
       }
 
-      // Build prompt
       const answerSummary = Object.entries(answerTexts).map(([q, a]) => {
         return `Q${q}: ${questions[q]}\nAnswer: ${a}`;
       }).join('\n\n');
 
-      const prompt = `You are Brandon Morgan, founder of Kelter Group, an operational consulting firm. You have just received the following responses to the Noise Score assessment — a tool that measures whether an organization is ready to benefit from AI deployment.
+      const prompt = `You are Brandon Morgan, founder of Kelter Group, an operational consulting firm. You have just received the following responses to the Noise Score assessment, a tool that measures whether an organization is ready to benefit from AI deployment.
 
 The core philosophy: AI is an accelerator. If you accelerate chaos, you get faster chaos. Organizations need to reduce operational noise before AI can create value.
 
@@ -304,18 +289,16 @@ The respondent scored ${totalScore} out of ${maxScore} points, indicating a ${no
 Their responses:
 ${answerSummary}
 
-Write a personalized assessment result in Brandon's voice — direct, honest, no sugarcoating, no corporate speak, no em dashes. 3-4 paragraphs. 
+Write a personalized assessment result in Brandon's voice, direct, honest, no sugarcoating, no corporate speak, no em dashes. 3 to 4 paragraphs.
 
-Start by naming what you see in their specific answers — don't be generic. Then explain what their noise level means for AI deployment specifically. End with one concrete thing they should focus on first before implementing any AI.
+Start by naming what you see in their specific answers, do not be generic. Then explain what their noise level means for AI deployment specifically. End with one concrete thing they should focus on first before implementing any AI.
 
 Do not use bullet points. Write in flowing paragraphs. Sound like a trusted advisor who has seen this before, not a consultant selling services. Do not mention Kelter Group or suggest they contact anyone.`;
 
       try {
-        const response = await fetch('https://misty-silence-5354.brandon-morgan-da0.workers.dev', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
+        const response = await fetch(WORKER_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             model: 'claude-sonnet-4-20250514',
             max_tokens: 600,
@@ -328,13 +311,10 @@ Do not use bullet points. Write in flowing paragraphs. Sound like a trusted advi
 
         document.getElementById('assessmentLoading').style.display = 'none';
         document.getElementById('assessmentResults').style.display = 'block';
-
-        // Set score display
         document.getElementById('scoreLabel').textContent = noiseLabelText;
         document.getElementById('scoreLabel').style.color = noiseColor;
         document.getElementById('scoreIndicator').style.background = noiseColor;
 
-        // Animate narrative in
         const narrativeEl = document.getElementById('resultsNarrative');
         narrativeEl.innerHTML = narrative.split('\n\n').map(p => `<p>${p}</p>`).join('');
 
@@ -346,7 +326,6 @@ Do not use bullet points. Write in flowing paragraphs. Sound like a trusted advi
       }
     }
 
-    // Retake
     document.getElementById('retakeBtn').addEventListener('click', () => {
       location.reload();
     });
