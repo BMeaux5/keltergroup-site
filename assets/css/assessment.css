@@ -200,8 +200,6 @@
   border-radius: 3px;
   overflow: hidden;
 }
-
-/* Verdict */
 .results-verdict {
   padding: 36px 48px;
   border-bottom: 1px solid var(--border);
@@ -219,42 +217,39 @@
   color: var(--text-muted);
   letter-spacing: 0.08em;
 }
-
-/* Sections */
 .results-section {
   padding: 28px 48px;
   border-bottom: 1px solid var(--border);
 }
 .results-section-label {
   font-size: 10px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--slate);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  display: block;
 }
 .results-section-text {
   font-size: 15px;
   font-weight: 300;
   color: var(--text-mid);
   line-height: 1.75;
+  display: block;
 }
-
-/* Start Here — highlighted */
 .results-action {
-  background: var(--slate-dark);
-  border-bottom: none;
+  background: var(--slate-dark) !important;
+  border-bottom: none !important;
+  padding: 32px 48px !important;
 }
 .results-action .results-section-label {
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.5) !important;
 }
 .results-action .results-section-text {
-  color: #fff;
-  font-weight: 400;
-  font-size: 16px;
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  font-size: 17px !important;
 }
-
-/* CTA */
 .results-cta {
   padding: 36px 48px;
   background: var(--cream);
@@ -272,31 +267,4 @@
   font-weight: 300;
   color: var(--text-muted);
   line-height: 1.7;
-  margin-bottom: 24px;
-  max-width: 480px;
-}
-.results-cta-btns {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-.results-cta-btns .btn-ghost {
-  cursor: pointer;
-  font-family: var(--font);
-  border: 1.5px solid rgba(0,0,0,0.18);
-}
-
-/* =====================
-   RESPONSIVE
-   ===================== */
-@media (max-width: 900px) {
-  .page-hero { padding: 100px 24px 60px; }
-  .assessment-section { padding: 40px 24px 60px; }
-  .intro-card { padding: 32px 24px; }
-  .intro-meta { gap: 20px; }
-  .question-block { padding: 28px 24px; }
-  .results-verdict { padding: 28px 24px; }
-  .results-section { padding: 24px; }
-  .results-action { padding: 24px; }
-  .results-cta { padding: 28px 24px; }
-}
+  margin-bottom: 24px
