@@ -34,7 +34,7 @@
   padding: 80px 48px 100px;
 }
 .assessment-container {
-  max-width: 720px;
+  max-width: 680px;
   margin: 0 auto;
 }
 
@@ -48,7 +48,7 @@
   padding: 56px 48px;
 }
 .intro-card h2 {
-  font-size: clamp(24px,3vw,36px);
+  font-size: clamp(22px,3vw,32px);
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--text);
@@ -56,22 +56,22 @@
   line-height: 1.2;
 }
 .intro-card p {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 300;
   color: var(--text-mid);
   line-height: 1.75;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 .intro-meta {
   display: flex;
   gap: 40px;
   margin: 36px 0;
-  padding: 32px 0;
+  padding: 28px 0;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
 .intro-meta-num {
-  font-size: 48px;
+  font-size: 44px;
   font-weight: 700;
   letter-spacing: -0.04em;
   color: var(--slate-dark);
@@ -109,7 +109,7 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text-muted);
-  margin-bottom: 36px;
+  margin-bottom: 24px;
 }
 
 /* =====================
@@ -122,7 +122,7 @@
   padding: 48px;
 }
 .question-text {
-  font-size: clamp(20px,2.5vw,28px);
+  font-size: clamp(18px,2.5vw,26px);
   font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--text);
@@ -132,15 +132,15 @@
 .options {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 .option-btn {
-  padding: 18px 24px;
+  padding: 16px 22px;
   background: var(--cream);
   border: 1.5px solid var(--border);
   border-radius: 2px;
   font-family: var(--font);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 300;
   color: var(--text-mid);
   text-align: left;
@@ -162,23 +162,26 @@
 /* =====================
    LOADING
    ===================== */
-.assessment-loading {
+.loading-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 80px 48px;
   gap: 24px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 3px;
 }
-.assessment-loading p {
-  font-size: 15px;
+.loading-wrap p {
+  font-size: 14px;
   font-weight: 300;
   color: var(--text-muted);
   letter-spacing: 0.06em;
 }
 .loading-spinner {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border: 3px solid var(--border);
   border-top-color: var(--slate);
   border-radius: 50%;
@@ -191,61 +194,86 @@
 /* =====================
    RESULTS
    ===================== */
-.assessment-results {
+.results-card {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: 3px;
   overflow: hidden;
 }
-.results-score-wrap {
-  padding: 48px 48px 36px;
+
+/* Verdict */
+.results-verdict {
+  padding: 36px 48px;
   border-bottom: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  gap: 20px;
 }
-.results-score-indicator {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-.results-score-label {
-  font-size: 32px;
+.verdict-score {
+  font-size: 52px;
   font-weight: 700;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
   line-height: 1;
+  margin-bottom: 6px;
 }
-.results-narrative {
-  padding: 40px 48px;
+.verdict-points {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+}
+
+/* Sections */
+.results-section {
+  padding: 28px 48px;
   border-bottom: 1px solid var(--border);
 }
-.results-narrative p {
-  font-size: 16px;
+.results-section-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-bottom: 10px;
+}
+.results-section-text {
+  font-size: 15px;
   font-weight: 300;
   color: var(--text-mid);
-  line-height: 1.85;
-  margin-bottom: 20px;
+  line-height: 1.75;
 }
-.results-narrative p:last-child { margin-bottom: 0; }
+
+/* Start Here — highlighted */
+.results-action {
+  background: var(--slate-dark);
+  border-bottom: none;
+}
+.results-action .results-section-label {
+  color: rgba(255,255,255,0.45);
+}
+.results-action .results-section-text {
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* CTA */
 .results-cta {
-  padding: 40px 48px;
+  padding: 36px 48px;
   background: var(--cream);
+  border-top: 1px solid var(--border);
 }
 .results-cta h3 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
   color: var(--text);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   letter-spacing: -0.02em;
 }
 .results-cta p {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 300;
   color: var(--text-muted);
   line-height: 1.7;
   margin-bottom: 24px;
-  max-width: 520px;
+  max-width: 480px;
 }
 .results-cta-btns {
   display: flex;
@@ -258,70 +286,17 @@
   border: 1.5px solid rgba(0,0,0,0.18);
 }
 
-/* NAV ACTIVE */
-.nav-links a.active { color: var(--slate-dark); }
-/* =====================
-   RESULTS REDESIGN
-   ===================== */
-.results-verdict {
-  padding: 32px 48px;
-  border-bottom: 1px solid var(--border);
-}
-.verdict-score {
-  font-size: 48px;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  line-height: 1;
-  margin-bottom: 6px;
-}
-.verdict-sub {
-  font-size: 13px;
-  font-weight: 400;
-  color: var(--text-muted);
-  letter-spacing: 0.06em;
-}
-.results-body {
-  border-bottom: 1px solid var(--border);
-}
-.result-section {
-  padding: 28px 48px;
-  border-bottom: 1px solid var(--border);
-}
-.result-section:last-child { border-bottom: none; }
-.result-section-highlight {
-  background: var(--slate-dark);
-}
-.result-section-highlight .result-section-label {
-  color: rgba(255,255,255,0.5);
-}
-.result-section-highlight .result-section-text {
-  color: #fff;
-  font-weight: 400;
-}
-.result-section-label {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: var(--slate);
-  margin-bottom: 10px;
-}
-.result-section-text {
-  font-size: 16px;
-  font-weight: 300;
-  color: var(--text-mid);
-  line-height: 1.7;
-}
 /* =====================
    RESPONSIVE
    ===================== */
 @media (max-width: 900px) {
   .page-hero { padding: 100px 24px 60px; }
   .assessment-section { padding: 40px 24px 60px; }
-  .intro-card { padding: 36px 24px; }
-  .intro-meta { gap: 24px; }
-  .question-block { padding: 32px 24px; }
-  .results-score-wrap { padding: 32px 24px 24px; }
-  .results-narrative { padding: 28px 24px; }
+  .intro-card { padding: 32px 24px; }
+  .intro-meta { gap: 20px; }
+  .question-block { padding: 28px 24px; }
+  .results-verdict { padding: 28px 24px; }
+  .results-section { padding: 24px; }
+  .results-action { padding: 24px; }
   .results-cta { padding: 28px 24px; }
 }
