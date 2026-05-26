@@ -272,18 +272,17 @@ a.svc-row {
 }
 .assessment-callout .eyebrow {
   justify-content: center;
-   display: flex;
+  display: flex;
   color: rgba(255,255,255,0.4);
-}
-.assessment-callout .eyebrow::before {
-  background: rgba(255,255,255,0.3);
 }
 .assessment-callout .sec-title {
   color: #fff;
   margin-bottom: 12px;
+  text-align: center;
 }
 .assessment-callout .sec-body {
   color: rgba(255,255,255,0.65);
+  text-align: center;
 }
 
 /* =====================
