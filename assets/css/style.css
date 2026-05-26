@@ -252,6 +252,12 @@ nav {
   font-size:13px; font-weight:300; color:var(--text-muted); font-style:italic;
 }
 
+a.svc-row {
+  display: grid;
+  text-decoration: none;
+  color: inherit;
+}
+
 /* =====================
    WORD MARQUEE
    ===================== */
