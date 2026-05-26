@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Noise Score — Find out if your organization is ready to benefit from AI, or if you'll just accelerate your chaos.">
+  <title>The Noise Score | Kelter Group</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/assessment.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="/" class="nav-logo">
+      <img src="images/logo-black-no-background.png" alt="Kelter Group">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="insights.html">Insights</a></li>
+      <li><a href="contact.html" class="nav-cta">Let's Talk</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero assessment-hero">
+    <div class="page-hero-inner">
+      <div class="eyebrow">Operational Intelligence</div>
+      <h1 class="page-title">The Noise Score</h1>
+      <p class="page-hero-sub">AI is an accelerator. If you accelerate chaos, you get faster chaos. Find out where your organization actually stands before you deploy anything.</p>
+    </div>
+  </section>
+
+  <!-- ASSESSMENT CONTAINER -->
+  <section class="assessment-section">
+    <div class="assessment-container">
+
+      <!-- INTRO -->
+      <div class="assessment-intro" id="assessmentIntro">
+        <div class="intro-card">
+          <h2>Before you implement AI, answer six questions.</h2>
+          <p>This assessment takes 90 seconds. It will tell you whether your organization is positioned to benefit from AI — or whether you need to reduce the noise first.</p>
+          <p>No email required. No sales pitch. Just an honest read on where you stand.</p>
+          <div class="intro-meta">
+            <div class="intro-meta-item">
+              <div class="intro-meta-num">6</div>
+              <div class="intro-meta-lbl">Questions</div>
+            </div>
+            <div class="intro-meta-item">
+              <div class="intro-meta-num">90</div>
+              <div class="intro-meta-lbl">Seconds</div>
+            </div>
+            <div class="intro-meta-item">
+              <div class="intro-meta-num">1</div>
+              <div class="intro-meta-lbl">Honest result</div>
+            </div>
+          </div>
+          <button class="btn-primary" id="startBtn">Start the Assessment</button>
+        </div>
+      </div>
+
+      <!-- QUESTIONS -->
+      <div class="assessment-questions" id="assessmentQuestions" style="display:none;">
+
+        <!-- Progress bar -->
+        <div class="progress-wrap">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <div class="progress-label" id="progressLabel">Question 1 of 6</div>
+
+        <!-- Q1 -->
+        <div class="question-block" id="q1" data-question="1">
+          <h2 class="question-text">How confident are you that your frontline operations are executing on your strategic priorities?</h2>
+          <div class="options">
+            <button class="option-btn" data-value="4">Very confident — we have clear line of sight from strategy to execution.</button>
+            <button class="option-btn" data-value="3">Somewhat confident — but there are gaps I cannot fully explain.</button>
+            <button class="option-btn" data-value="2">Not very confident — strategy and daily operations feel disconnected.</button>
+            <button class="option-btn" data-value="1">I do not have enough visibility to answer that honestly.</button>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="question-block" id="q2" data-question="2" style="display:none;">
+          <h2 class="question-text">When you need to understand what is actually happening in your operation, what does that look like?</h2>
+          <div class="options">
+            <button class="option-btn" data-value="4">I have reliable data and trust it to make decisions.</button>
+            <button class="option-btn" data-value="3">I have data but I am never sure if I am seeing the full picture.</button>
+            <button class="option-btn" data-value="2">I rely on my team to tell me — and hope they are right.</button>
+            <button class="option-btn" data-value="1">I often find out about problems after they have already cost us.</button>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="question-block" id="q3" data-question="3" style="display:none;">
+          <h2 class="question-text">How would you describe your organization's ability to identify a problem and act on it?</h2>
+          <div class="options">
+            <button class="option-btn" data-value="4">Fast and consistent — we have clear ownership and cadence.</button>
+            <button class="option-btn" data-value="3">Inconsistent — depends on who is involved.</button>
+            <button class="option-btn" data-value="2">Slow — by the time we act, the window has passed.</button>
+            <button class="option-btn" data-value="1">Reactive — we are usually responding to crises.</button>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="question-block" id="q4" data-question="4" style="display:none;">
+          <h2 class="question-text">Where does your greatest operational risk live right now?</h2>
+          <div class="options">
+            <button class="option-btn" data-value="4">In our people — too much depends on specific individuals.</button>
+            <button class="option-btn" data-value="3">In our data — we do not fully trust what we are measuring.</button>
+            <button class="option-btn" data-value="2">In our processes — too much variation, too little consistency.</button>
+            <button class="option-btn" data-value="1">In our technology — systems that do not talk to each other.</button>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="question-block" id="q5" data-question="5" style="display:none;">
+          <h2 class="question-text">How would you characterize your organization's track record with operational improvement initiatives?</h2>
+          <div class="options">
+            <button class="option-btn" data-value="4">Strong — we implement and it sticks.</button>
+            <button class="option-btn" data-value="3">Mixed — good intentions but inconsistent follow-through.</button>
+            <button class="option-btn" data-value="2">Weak — initiatives start strong and fade.</button>
+            <button class="option-btn" data-value="1">We have been burned enough times that there is resistance to trying again.</button>
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="question-block" id="q6" data-question="6" style="display:none;">
+          <h2 class="question-text">How is your organization currently approaching AI deployment?</h2>
+          <div class="options">
+            <button class="option-btn" data-value="4">Strategically — we are identifying specific problems AI can solve.</button>
+            <button class="option-btn" data-value="3">Experimentally — we are trying things but without a clear framework.</button>
+            <button class="option-btn" data-value="2">Reactively — we are feeling pressure to do something but do not know where to start.</button>
+            <button class="option-btn" data-value="1">We have not started — and that is making leadership nervous.</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- LOADING -->
+      <div class="assessment-loading" id="assessmentLoading" style="display:none;">
+        <div class="loading-spinner"></div>
+        <p>Analyzing your responses...</p>
+      </div>
+
+      <!-- RESULTS -->
+      <div class="assessment-results" id="assessmentResults" style="display:none;">
+        <div class="results-score-wrap">
+          <div class="results-score-label" id="scoreLabel"></div>
+          <div class="results-score-indicator" id="scoreIndicator"></div>
+        </div>
+        <div class="results-narrative" id="resultsNarrative"></div>
+        <div class="results-cta">
+          <h3>Want to go deeper?</h3>
+          <p>This assessment gives you a directional read. A full Operational Intelligence engagement goes much further — identifying exactly where your noise is coming from and building the systems to reduce it.</p>
+          <div class="results-cta-btns">
+            <a href="contact.html" class="btn-primary">Start a Conversation</a>
+            <button class="btn-ghost" id="retakeBtn">Retake Assessment</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo-white.png" alt="Kelter Group">
+        <p>Founder-led operational consulting. Less chaos. Better systems. Outcomes that hold.</p>
+      </div>
+      <div>
+        <div class="footer-head">Navigation</div>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-head">Contact</div>
+        <ul class="footer-links">
+          <li><a href="mailto:brandon.morgan@keltergroup.com">brandon.morgan@keltergroup.com</a></li>
+          <li><a href="https://linkedin.com/in/bgmorgan5" target="_blank">LinkedIn</a></li>
+        </ul>
+        <div class="footer-location">Brevard, North Carolina</div>
+      </div>
+    </div>
+    <div class="footer-btm">
+      <p>&copy; 2026 Kelter Group. All rights reserved.</p>
+      <p>Part of the Kelter Group family of brands.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // ============================================
+    // REPLACE THIS WITH YOUR ACTUAL API KEY
+    const ANTHROPIC_API_KEY = 'YOUR_API_KEY_HERE';
+    // ============================================
+
+    const answers = {};
+    let currentQuestion = 1;
+    const totalQuestions = 6;
+
+    const questions = {
+      1: "How confident are you that your frontline operations are executing on your strategic priorities?",
+      2: "When you need to understand what is actually happening in your operation, what does that look like?",
+      3: "How would you describe your organization's ability to identify a problem and act on it?",
+      4: "Where does your greatest operational risk live right now?",
+      5: "How would you characterize your organization's track record with operational improvement initiatives?",
+      6: "How is your organization currently approaching AI deployment?"
+    };
+
+    const answerTexts = {};
+
+    // Start button
+    document.getElementById('startBtn').addEventListener('click', () => {
+      document.getElementById('assessmentIntro').style.display = 'none';
+      document.getElementById('assessmentQuestions').style.display = 'block';
+      updateProgress();
+    });
+
+    // Option buttons
+    document.querySelectorAll('.option-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const qBlock = this.closest('.question-block');
+        const qNum = parseInt(qBlock.dataset.question);
+        const value = parseInt(this.dataset.value);
+        const text = this.textContent.trim();
+
+        answers[qNum] = value;
+        answerTexts[qNum] = text;
+
+        // Highlight selected
+        qBlock.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+        this.classList.add('selected');
+
+        // Auto advance after brief delay
+        setTimeout(() => {
+          if (qNum < totalQuestions) {
+            document.getElementById(`q${qNum}`).style.display = 'none';
+            document.getElementById(`q${qNum + 1}`).style.display = 'block';
+            currentQuestion = qNum + 1;
+            updateProgress();
+          } else {
+            submitAssessment();
+          }
+        }, 400);
+      });
+    });
+
+    function updateProgress() {
+      const pct = ((currentQuestion - 1) / totalQuestions) * 100;
+      document.getElementById('progressBar').style.width = pct + '%';
+      document.getElementById('progressLabel').textContent = `Question ${currentQuestion} of ${totalQuestions}`;
+    }
+
+    async function submitAssessment() {
+      document.getElementById('assessmentQuestions').style.display = 'none';
+      document.getElementById('assessmentLoading').style.display = 'flex';
+
+      const totalScore = Object.values(answers).reduce((a, b) => a + b, 0);
+      const maxScore = totalQuestions * 4;
+      const pct = (totalScore / maxScore) * 100;
+
+      let noiseLevel, noiseLabelText, noiseColor;
+      if (pct >= 70) {
+        noiseLevel = 'low';
+        noiseLabelText = 'Low Noise';
+        noiseColor = '#2E7D4F';
+      } else if (pct >= 45) {
+        noiseLevel = 'moderate';
+        noiseLabelText = 'Moderate Noise';
+        noiseColor = '#B8860B';
+      } else {
+        noiseLevel = 'high';
+        noiseLabelText = 'High Noise';
+        noiseColor = '#C0392B';
+      }
+
+      // Build prompt
+      const answerSummary = Object.entries(answerTexts).map(([q, a]) => {
+        return `Q${q}: ${questions[q]}\nAnswer: ${a}`;
+      }).join('\n\n');
+
+      const prompt = `You are Brandon Morgan, founder of Kelter Group, an operational consulting firm. You have just received the following responses to the Noise Score assessment — a tool that measures whether an organization is ready to benefit from AI deployment.
+
+The core philosophy: AI is an accelerator. If you accelerate chaos, you get faster chaos. Organizations need to reduce operational noise before AI can create value.
+
+The respondent scored ${totalScore} out of ${maxScore} points, indicating a ${noiseLabelText} level.
+
+Their responses:
+${answerSummary}
+
+Write a personalized assessment result in Brandon's voice — direct, honest, no sugarcoating, no corporate speak, no em dashes. 3-4 paragraphs. 
+
+Start by naming what you see in their specific answers — don't be generic. Then explain what their noise level means for AI deployment specifically. End with one concrete thing they should focus on first before implementing any AI.
+
+Do not use bullet points. Write in flowing paragraphs. Sound like a trusted advisor who has seen this before, not a consultant selling services. Do not mention Kelter Group or suggest they contact anyone.`;
+
+      try {
+        const response = await fetch('https://api.anthropic.com/v1/messages', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'x-api-key': ANTHROPIC_API_KEY,
+            'anthropic-version': '2023-06-01',
+            'anthropic-dangerous-direct-browser-access': 'true'
+          },
+          body: JSON.stringify({
+            model: 'claude-sonnet-4-20250514',
+            max_tokens: 600,
+            messages: [{ role: 'user', content: prompt }]
+          })
+        });
+
+        const data = await response.json();
+        const narrative = data.content[0].text;
+
+        document.getElementById('assessmentLoading').style.display = 'none';
+        document.getElementById('assessmentResults').style.display = 'block';
+
+        // Set score display
+        document.getElementById('scoreLabel').textContent = noiseLabelText;
+        document.getElementById('scoreLabel').style.color = noiseColor;
+        document.getElementById('scoreIndicator').style.background = noiseColor;
+
+        // Animate narrative in
+        const narrativeEl = document.getElementById('resultsNarrative');
+        narrativeEl.innerHTML = narrative.split('\n\n').map(p => `<p>${p}</p>`).join('');
+
+      } catch (err) {
+        document.getElementById('assessmentLoading').style.display = 'none';
+        document.getElementById('assessmentResults').style.display = 'block';
+        document.getElementById('resultsNarrative').innerHTML = '<p>Something went wrong generating your results. Please try again or contact us directly.</p>';
+        console.error(err);
+      }
+    }
+
+    // Retake
+    document.getElementById('retakeBtn').addEventListener('click', () => {
+      location.reload();
+    });
+  </script>
+</body>
+</html>
