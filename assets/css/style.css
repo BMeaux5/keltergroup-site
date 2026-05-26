@@ -273,6 +273,7 @@ a.svc-row {
 }
 .assessment-callout .eyebrow {
   justify-content: center;
+   display: flex;
   color: rgba(255,255,255,0.4);
 }
 .assessment-callout .eyebrow::before {
