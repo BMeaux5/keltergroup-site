@@ -77,21 +77,17 @@
               <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555">
             </div>
           </div>
-          <div class="form-group">
-            <label for="role">Your Role</label>
-            <select id="role" name="role">
-              <option value="" disabled selected>Select your role</option>
-              <option value="CEO / President">CEO / President</option>
-              <option value="COO / VP Operations">COO / VP Operations</option>
-              <option value="CFO">CFO</option>
-              <option value="PE / Investment Professional">PE / Investment Professional</option>
-              <option value="Plant / Operations Manager">Plant / Operations Manager</option>
-              <option value="Quality / CI Leader">Quality / CI Leader</option>
-              <option value="HR / Talent Leader">HR / Talent Leader</option>
-              <option value="Consultant / Intermediary">Consultant / Intermediary</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
+         <div class="form-group">
+  <label for="inquiry_type">I am reaching out as a</label>
+  <select id="inquiry_type" name="inquiry_type" required>
+    <option value="" disabled selected>Select one</option>
+    <option value="PE Firm or Investment Professional">PE Firm or Investment Professional</option>
+    <option value="Executive or Operations Leader">Executive or Operations Leader</option>
+    <option value="Noise Score Follow-Up">I took the Noise Score and want to talk</option>
+    <option value="General Inquiry">General inquiry</option>
+    <option value="Recruiter or Intermediary">Recruiter or Intermediary</option>
+  </select>
+</div>
           <div class="form-group">
             <label for="message">How can I help?</label>
             <textarea id="message" name="message" required rows="5" placeholder="Tell me what's going on. What are you trying to solve?"></textarea>
