@@ -259,6 +259,33 @@ a.svc-row {
 }
 
 /* =====================
+   ASSESSMENT CALLOUT
+   ===================== */
+.assessment-callout {
+  background: var(--slate-dark);
+  padding: 80px 48px;
+  text-align: center;
+}
+.assessment-callout-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.assessment-callout .eyebrow {
+  justify-content: center;
+  color: rgba(255,255,255,0.4);
+}
+.assessment-callout .eyebrow::before {
+  background: rgba(255,255,255,0.3);
+}
+.assessment-callout .sec-title {
+  color: #fff;
+  margin-bottom: 12px;
+}
+.assessment-callout .sec-body {
+  color: rgba(255,255,255,0.65);
+}
+
+/* =====================
    WORD MARQUEE
    ===================== */
 .word-marquee {
