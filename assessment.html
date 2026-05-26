@@ -203,7 +203,11 @@
   <script>
     // ============================================
     // REPLACE THIS WITH YOUR ACTUAL API KEY
-    const ANTHROPIC_API_KEY = 'YOUR_API_KEY_HERE';
+  const response = await fetch('https://misty-silence-5354.brandon-morgan-da0.workers.dev', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
     // ============================================
 
     const answers = {};
@@ -307,14 +311,11 @@ Start by naming what you see in their specific answers — don't be generic. The
 Do not use bullet points. Write in flowing paragraphs. Sound like a trusted advisor who has seen this before, not a consultant selling services. Do not mention Kelter Group or suggest they contact anyone.`;
 
       try {
-        const response = await fetch('https://api.anthropic.com/v1/messages', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'x-api-key': ANTHROPIC_API_KEY,
-            'anthropic-version': '2023-06-01',
-            'anthropic-dangerous-direct-browser-access': 'true'
-          },
+        const response = await fetch('https://misty-silence-5354.brandon-morgan-da0.workers.dev', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
           body: JSON.stringify({
             model: 'claude-sonnet-4-20250514',
             max_tokens: 600,
