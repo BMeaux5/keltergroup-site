@@ -264,25 +264,26 @@ a.svc-row {
 .assessment-callout {
   background: var(--slate-dark);
   padding: 80px 48px;
-  text-align: center;
 }
 .assessment-callout-inner {
   max-width: 600px;
-  margin: 0 auto;
 }
 .assessment-callout .eyebrow {
-  justify-content: center;
   display: flex;
+  align-items: center;
+  gap: 10px;
   color: rgba(255,255,255,0.4);
+  margin-bottom: 14px;
+}
+.assessment-callout .eyebrow::before {
+  background: rgba(255,255,255,0.3);
 }
 .assessment-callout .sec-title {
   color: #fff;
   margin-bottom: 12px;
-  text-align: center;
 }
 .assessment-callout .sec-body {
   color: rgba(255,255,255,0.65);
-  text-align: center;
 }
 
 /* =====================
