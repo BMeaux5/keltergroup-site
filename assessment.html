@@ -149,14 +149,11 @@
 
       <!-- RESULTS -->
       <div class="assessment-results" id="assessmentResults" style="display:none;">
-        <div class="results-score-wrap">
-          <div class="results-score-label" id="scoreLabel"></div>
-          <div class="results-score-indicator" id="scoreIndicator"></div>
-        </div>
-        <div class="results-narrative" id="resultsNarrative"></div>
+        <div class="results-verdict" id="resultsVerdict"></div>
+        <div class="results-body" id="resultsBody"></div>
         <div class="results-cta">
           <h3>Want to go deeper?</h3>
-          <p>This assessment gives you a directional read. A full Operational Intelligence engagement goes much further — identifying exactly where your noise is coming from and building the systems to reduce it.</p>
+          <p>This assessment gives you a directional read. A full Operational Intelligence engagement identifies exactly where your noise is coming from and builds the systems to reduce it.</p>
           <div class="results-cta-btns">
             <a href="contact.html" class="btn-primary">Start a Conversation</a>
             <button class="btn-ghost" id="retakeBtn">Retake Assessment</button>
@@ -199,7 +196,7 @@
     </div>
   </footer>
 
- <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
   <script>
     const WORKER_URL = 'https://misty-silence-5354.brandon-morgan-da0.workers.dev';
 
@@ -264,36 +261,46 @@
       const maxScore = totalQuestions * 4;
       const pct = (totalScore / maxScore) * 100;
 
-      let noiseLabelText, noiseColor;
+      let noiseLabelText, noiseColor, noiseBg;
       if (pct >= 70) {
         noiseLabelText = 'Low Noise';
         noiseColor = '#2E7D4F';
+        noiseBg = '#F0FAF4';
       } else if (pct >= 45) {
         noiseLabelText = 'Moderate Noise';
         noiseColor = '#B8860B';
+        noiseBg = '#FFFBF0';
       } else {
         noiseLabelText = 'High Noise';
         noiseColor = '#C0392B';
+        noiseBg = '#FDF0EF';
       }
 
       const answerSummary = Object.entries(answerTexts).map(([q, a]) => {
         return `Q${q}: ${questions[q]}\nAnswer: ${a}`;
       }).join('\n\n');
 
-      const prompt = `You are Brandon Morgan, founder of Kelter Group, an operational consulting firm. You have just received the following responses to the Noise Score assessment, a tool that measures whether an organization is ready to benefit from AI deployment.
+      const prompt = `You are Brandon Morgan, a direct, experienced operational consultant. You have just reviewed someone's Noise Score assessment responses.
 
-The core philosophy: AI is an accelerator. If you accelerate chaos, you get faster chaos. Organizations need to reduce operational noise before AI can create value.
+Core philosophy: AI is an accelerator. Accelerating chaos gives you faster chaos. Reduce the noise first.
 
-The respondent scored ${totalScore} out of ${maxScore} points, indicating a ${noiseLabelText} level.
+Score: ${totalScore} out of ${maxScore} — ${noiseLabelText}
 
 Their responses:
 ${answerSummary}
 
-Write a personalized assessment result in Brandon's voice, direct, honest, no sugarcoating, no corporate speak, no em dashes. 3 to 4 paragraphs.
+Write a tight, executive-level result. Format it EXACTLY like this, using these exact section headers:
 
-Start by naming what you see in their specific answers, do not be generic. Then explain what their noise level means for AI deployment specifically. End with one concrete thing they should focus on first before implementing any AI.
+WHAT I SEE
+One or two sentences. Name specifically what their answers reveal. Be direct. No generic observations.
 
-Do not use bullet points. Write in flowing paragraphs. Sound like a trusted advisor who has seen this before, not a consultant selling services. Do not mention Kelter Group or suggest they contact anyone.`;
+WHAT THIS MEANS FOR AI
+One or two sentences. Tell them plainly whether AI will help or hurt them right now and why.
+
+YOUR FIRST MOVE
+One sentence. A single, specific, concrete action they should take before touching any AI tool.
+
+Rules: No em dashes. No bullet points. No corporate speak. No fluff. Each section is short. A busy executive should be able to read this in 30 seconds.`;
 
       try {
         const response = await fetch(WORKER_URL, {
@@ -301,27 +308,55 @@ Do not use bullet points. Write in flowing paragraphs. Sound like a trusted advi
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             model: 'claude-sonnet-4-6',
-            max_tokens: 600,
+            max_tokens: 400,
             messages: [{ role: 'user', content: prompt }]
           })
         });
 
         const data = await response.json();
-        const narrative = data.content[0].text;
+        const text = data.content[0].text;
 
         document.getElementById('assessmentLoading').style.display = 'none';
         document.getElementById('assessmentResults').style.display = 'block';
-        document.getElementById('scoreLabel').textContent = noiseLabelText;
-        document.getElementById('scoreLabel').style.color = noiseColor;
-        document.getElementById('scoreIndicator').style.background = noiseColor;
 
-        const narrativeEl = document.getElementById('resultsNarrative');
-        narrativeEl.innerHTML = narrative.split('\n\n').map(p => `<p>${p}</p>`).join('');
+        // Verdict block
+        const verdictEl = document.getElementById('resultsVerdict');
+        verdictEl.style.background = noiseBg;
+        verdictEl.style.borderLeft = `4px solid ${noiseColor}`;
+        verdictEl.innerHTML = `
+          <div class="verdict-score" style="color:${noiseColor}">${noiseLabelText}</div>
+          <div class="verdict-sub">${totalScore} out of ${maxScore} points</div>
+        `;
+
+        // Parse sections
+        const bodyEl = document.getElementById('resultsBody');
+        const sections = ['WHAT I SEE', 'WHAT THIS MEANS FOR AI', 'YOUR FIRST MOVE'];
+        let html = '';
+
+        sections.forEach((section, i) => {
+          const nextSection = sections[i + 1];
+          let content = '';
+          const startIdx = text.indexOf(section);
+          if (startIdx !== -1) {
+            const contentStart = startIdx + section.length;
+            const endIdx = nextSection ? text.indexOf(nextSection) : text.length;
+            content = text.substring(contentStart, endIdx).trim();
+          }
+          const isLast = i === sections.length - 1;
+          html += `
+            <div class="result-section ${isLast ? 'result-section-highlight' : ''}">
+              <div class="result-section-label">${section}</div>
+              <div class="result-section-text">${content}</div>
+            </div>
+          `;
+        });
+
+        bodyEl.innerHTML = html;
 
       } catch (err) {
         document.getElementById('assessmentLoading').style.display = 'none';
         document.getElementById('assessmentResults').style.display = 'block';
-        document.getElementById('resultsNarrative').innerHTML = '<p>Something went wrong generating your results. Please try again or contact us directly.</p>';
+        document.getElementById('resultsBody').innerHTML = '<p style="padding:24px;">Something went wrong. Please try again or contact us directly.</p>';
         console.error(err);
       }
     }
