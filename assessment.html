@@ -28,7 +28,7 @@
   </nav>
 
   <!-- PAGE HERO -->
-  <section class="page-hero assessment-hero">
+  <section class="page-hero">
     <div class="page-hero-inner">
       <div class="eyebrow">Operational Intelligence</div>
       <h1 class="page-title">The Noise Score</h1>
@@ -41,10 +41,10 @@
     <div class="assessment-container">
 
       <!-- INTRO -->
-      <div class="assessment-intro" id="assessmentIntro">
+      <div id="assessmentIntro">
         <div class="intro-card">
           <h2>Before you implement AI, answer six questions.</h2>
-          <p>This assessment takes 90 seconds. It will tell you whether your organization is positioned to benefit from AI — or whether you need to reduce the noise first.</p>
+          <p>This assessment takes 90 seconds. It will tell you whether your organization is positioned to benefit from AI, or whether you need to reduce the noise first.</p>
           <p>No email required. No sales pitch. Just an honest read on where you stand.</p>
           <div class="intro-meta">
             <div class="intro-meta-item">
@@ -65,99 +65,114 @@
       </div>
 
       <!-- QUESTIONS -->
-      <div class="assessment-questions" id="assessmentQuestions" style="display:none;">
-
-        <!-- Progress bar -->
+      <div id="assessmentQuestions" style="display:none;">
         <div class="progress-wrap">
           <div class="progress-bar" id="progressBar"></div>
         </div>
         <div class="progress-label" id="progressLabel">Question 1 of 6</div>
 
-        <!-- Q1 -->
         <div class="question-block" id="q1" data-question="1">
           <h2 class="question-text">How confident are you that your frontline operations are executing on your strategic priorities?</h2>
           <div class="options">
-            <button class="option-btn" data-value="4">Very confident — we have clear line of sight from strategy to execution.</button>
-            <button class="option-btn" data-value="3">Somewhat confident — but there are gaps I cannot fully explain.</button>
-            <button class="option-btn" data-value="2">Not very confident — strategy and daily operations feel disconnected.</button>
+            <button class="option-btn" data-value="4">Very confident. We have clear line of sight from strategy to execution.</button>
+            <button class="option-btn" data-value="3">Somewhat confident. But there are gaps I cannot fully explain.</button>
+            <button class="option-btn" data-value="2">Not very confident. Strategy and daily operations feel disconnected.</button>
             <button class="option-btn" data-value="1">I do not have enough visibility to answer that honestly.</button>
           </div>
         </div>
 
-        <!-- Q2 -->
         <div class="question-block" id="q2" data-question="2" style="display:none;">
           <h2 class="question-text">When you need to understand what is actually happening in your operation, what does that look like?</h2>
           <div class="options">
             <button class="option-btn" data-value="4">I have reliable data and trust it to make decisions.</button>
             <button class="option-btn" data-value="3">I have data but I am never sure if I am seeing the full picture.</button>
-            <button class="option-btn" data-value="2">I rely on my team to tell me — and hope they are right.</button>
+            <button class="option-btn" data-value="2">I rely on my team to tell me and hope they are right.</button>
             <button class="option-btn" data-value="1">I often find out about problems after they have already cost us.</button>
           </div>
         </div>
 
-        <!-- Q3 -->
         <div class="question-block" id="q3" data-question="3" style="display:none;">
           <h2 class="question-text">How would you describe your organization's ability to identify a problem and act on it?</h2>
           <div class="options">
-            <button class="option-btn" data-value="4">Fast and consistent — we have clear ownership and cadence.</button>
-            <button class="option-btn" data-value="3">Inconsistent — depends on who is involved.</button>
-            <button class="option-btn" data-value="2">Slow — by the time we act, the window has passed.</button>
-            <button class="option-btn" data-value="1">Reactive — we are usually responding to crises.</button>
+            <button class="option-btn" data-value="4">Fast and consistent. We have clear ownership and cadence.</button>
+            <button class="option-btn" data-value="3">Inconsistent. It depends on who is involved.</button>
+            <button class="option-btn" data-value="2">Slow. By the time we act, the window has passed.</button>
+            <button class="option-btn" data-value="1">Reactive. We are usually responding to crises.</button>
           </div>
         </div>
 
-        <!-- Q4 -->
         <div class="question-block" id="q4" data-question="4" style="display:none;">
           <h2 class="question-text">Where does your greatest operational risk live right now?</h2>
           <div class="options">
-            <button class="option-btn" data-value="4">In our people — too much depends on specific individuals.</button>
-            <button class="option-btn" data-value="3">In our data — we do not fully trust what we are measuring.</button>
-            <button class="option-btn" data-value="2">In our processes — too much variation, too little consistency.</button>
-            <button class="option-btn" data-value="1">In our technology — systems that do not talk to each other.</button>
+            <button class="option-btn" data-value="4">In our people. Too much depends on specific individuals.</button>
+            <button class="option-btn" data-value="3">In our data. We do not fully trust what we are measuring.</button>
+            <button class="option-btn" data-value="2">In our processes. Too much variation, too little consistency.</button>
+            <button class="option-btn" data-value="1">In our technology. Systems that do not talk to each other.</button>
           </div>
         </div>
 
-        <!-- Q5 -->
         <div class="question-block" id="q5" data-question="5" style="display:none;">
           <h2 class="question-text">How would you characterize your organization's track record with operational improvement initiatives?</h2>
           <div class="options">
-            <button class="option-btn" data-value="4">Strong — we implement and it sticks.</button>
-            <button class="option-btn" data-value="3">Mixed — good intentions but inconsistent follow-through.</button>
-            <button class="option-btn" data-value="2">Weak — initiatives start strong and fade.</button>
+            <button class="option-btn" data-value="4">Strong. We implement and it sticks.</button>
+            <button class="option-btn" data-value="3">Mixed. Good intentions but inconsistent follow-through.</button>
+            <button class="option-btn" data-value="2">Weak. Initiatives start strong and fade.</button>
             <button class="option-btn" data-value="1">We have been burned enough times that there is resistance to trying again.</button>
           </div>
         </div>
 
-        <!-- Q6 -->
         <div class="question-block" id="q6" data-question="6" style="display:none;">
           <h2 class="question-text">How is your organization currently approaching AI deployment?</h2>
           <div class="options">
-            <button class="option-btn" data-value="4">Strategically — we are identifying specific problems AI can solve.</button>
-            <button class="option-btn" data-value="3">Experimentally — we are trying things but without a clear framework.</button>
-            <button class="option-btn" data-value="2">Reactively — we are feeling pressure to do something but do not know where to start.</button>
-            <button class="option-btn" data-value="1">We have not started — and that is making leadership nervous.</button>
+            <button class="option-btn" data-value="4">Strategically. We are identifying specific problems AI can solve.</button>
+            <button class="option-btn" data-value="3">Experimentally. We are trying things but without a clear framework.</button>
+            <button class="option-btn" data-value="2">Reactively. We feel pressure to do something but do not know where to start.</button>
+            <button class="option-btn" data-value="1">We have not started, and that is making leadership nervous.</button>
           </div>
         </div>
-
       </div>
 
       <!-- LOADING -->
-      <div class="assessment-loading" id="assessmentLoading" style="display:none;">
-        <div class="loading-spinner"></div>
-        <p>Analyzing your responses...</p>
+      <div id="assessmentLoading" style="display:none;">
+        <div class="loading-wrap">
+          <div class="loading-spinner"></div>
+          <p>Analyzing your responses...</p>
+        </div>
       </div>
 
       <!-- RESULTS -->
-      <div class="assessment-results" id="assessmentResults" style="display:none;">
-        <div class="results-verdict" id="resultsVerdict"></div>
-        <div class="results-body" id="resultsBody"></div>
-        <div class="results-cta">
-          <h3>Want to go deeper?</h3>
-          <p>This assessment gives you a directional read. A full Operational Intelligence engagement identifies exactly where your noise is coming from and builds the systems to reduce it.</p>
-          <div class="results-cta-btns">
-            <a href="contact.html" class="btn-primary">Start a Conversation</a>
-            <button class="btn-ghost" id="retakeBtn">Retake Assessment</button>
+      <div id="assessmentResults" style="display:none;">
+        <div class="results-card">
+
+          <!-- VERDICT -->
+          <div class="results-verdict" id="resultsVerdict"></div>
+
+          <!-- SECTIONS -->
+          <div class="results-section">
+            <div class="results-section-label">What This Means</div>
+            <div class="results-section-text" id="resultsMeaning"></div>
           </div>
+
+          <div class="results-section">
+            <div class="results-section-label">What Is Blocking You</div>
+            <div class="results-section-text" id="resultsBlocking"></div>
+          </div>
+
+          <div class="results-section results-action">
+            <div class="results-section-label">Start Here</div>
+            <div class="results-section-text" id="resultsAction"></div>
+          </div>
+
+          <!-- CTA -->
+          <div class="results-cta">
+            <h3>Want to go deeper?</h3>
+            <p>This assessment gives you a directional read. A full Operational Intelligence engagement identifies exactly where your noise is coming from and builds the systems to reduce it.</p>
+            <div class="results-cta-btns">
+              <a href="contact.html" class="btn-primary">Start a Conversation</a>
+              <button class="btn-ghost" id="retakeBtn">Retake Assessment</button>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -236,8 +251,8 @@
 
         setTimeout(() => {
           if (qNum < totalQuestions) {
-            document.getElementById(`q${qNum}`).style.display = 'none';
-            document.getElementById(`q${qNum + 1}`).style.display = 'block';
+            document.getElementById('q' + qNum).style.display = 'none';
+            document.getElementById('q' + (qNum + 1)).style.display = 'block';
             currentQuestion = qNum + 1;
             updateProgress();
           } else {
@@ -250,12 +265,12 @@
     function updateProgress() {
       const pct = ((currentQuestion - 1) / totalQuestions) * 100;
       document.getElementById('progressBar').style.width = pct + '%';
-      document.getElementById('progressLabel').textContent = `Question ${currentQuestion} of ${totalQuestions}`;
+      document.getElementById('progressLabel').textContent = 'Question ' + currentQuestion + ' of ' + totalQuestions;
     }
 
     async function submitAssessment() {
       document.getElementById('assessmentQuestions').style.display = 'none';
-      document.getElementById('assessmentLoading').style.display = 'flex';
+      document.getElementById('assessmentLoading').style.display = 'block';
 
       const totalScore = Object.values(answers).reduce((a, b) => a + b, 0);
       const maxScore = totalQuestions * 4;
@@ -268,7 +283,7 @@
         noiseBg = '#F0FAF4';
       } else if (pct >= 45) {
         noiseLabelText = 'Moderate Noise';
-        noiseColor = '#B8860B';
+        noiseColor = '#8A6200';
         noiseBg = '#FFFBF0';
       } else {
         noiseLabelText = 'High Noise';
@@ -277,30 +292,30 @@
       }
 
       const answerSummary = Object.entries(answerTexts).map(([q, a]) => {
-        return `Q${q}: ${questions[q]}\nAnswer: ${a}`;
+        return 'Q' + q + ': ' + questions[q] + '\nAnswer: ' + a;
       }).join('\n\n');
 
-      const prompt = `You are Brandon Morgan, a direct, experienced operational consultant. You have just reviewed someone's Noise Score assessment responses.
+      const prompt = `You are Brandon Morgan, a direct and experienced operational consultant. You have just reviewed someone's Noise Score assessment.
 
-Core philosophy: AI is an accelerator. Accelerating chaos gives you faster chaos. Reduce the noise first.
+Core philosophy: AI is an accelerator. Accelerating chaos gives you faster chaos. Reduce operational noise before deploying AI.
 
 Score: ${totalScore} out of ${maxScore} — ${noiseLabelText}
 
 Their responses:
 ${answerSummary}
 
-Write a tight, executive-level result. Format it EXACTLY like this, using these exact section headers:
+Write a tight, executive-level result with exactly three sections. Use these exact headers on their own line:
 
-WHAT I SEE
-One or two sentences. Name specifically what their answers reveal. Be direct. No generic observations.
+WHAT THIS MEANS
+Two sentences maximum. State the verdict plainly based on their score. Name the pattern you see in their answers without being generic.
 
-WHAT THIS MEANS FOR AI
-One or two sentences. Tell them plainly whether AI will help or hurt them right now and why.
+WHAT IS BLOCKING YOU
+Two sentences maximum. Identify the specific operational gaps their answers reveal. Be direct about what will prevent AI from helping them.
 
-YOUR FIRST MOVE
-One sentence. A single, specific, concrete action they should take before touching any AI tool.
+START HERE
+One sentence. A single, specific, concrete action they should take before implementing any AI. Make it actionable, not conceptual.
 
-Rules: No em dashes. No bullet points. No corporate speak. No fluff. Each section is short. A busy executive should be able to read this in 30 seconds.`;
+Rules: No em dashes. No bullet points. No corporate speak. No fluff. Sound like a trusted advisor, not a consultant selling services. Do not mention Kelter Group.`;
 
       try {
         const response = await fetch(WORKER_URL, {
@@ -319,44 +334,31 @@ Rules: No em dashes. No bullet points. No corporate speak. No fluff. Each sectio
         document.getElementById('assessmentLoading').style.display = 'none';
         document.getElementById('assessmentResults').style.display = 'block';
 
-        // Verdict block
+        // Verdict
         const verdictEl = document.getElementById('resultsVerdict');
         verdictEl.style.background = noiseBg;
-        verdictEl.style.borderLeft = `4px solid ${noiseColor}`;
-        verdictEl.innerHTML = `
-          <div class="verdict-score" style="color:${noiseColor}">${noiseLabelText}</div>
-          <div class="verdict-sub">${totalScore} out of ${maxScore} points</div>
-        `;
+        verdictEl.style.borderLeft = '5px solid ' + noiseColor;
+        verdictEl.innerHTML =
+          '<div class="verdict-score" style="color:' + noiseColor + '">' + noiseLabelText + '</div>' +
+          '<div class="verdict-points">' + totalScore + ' / ' + maxScore + ' points</div>';
 
         // Parse sections
-        const bodyEl = document.getElementById('resultsBody');
-        const sections = ['WHAT I SEE', 'WHAT THIS MEANS FOR AI', 'YOUR FIRST MOVE'];
-        let html = '';
+        function extractSection(label, nextLabel) {
+          const start = text.indexOf(label);
+          if (start === -1) return '';
+          const contentStart = start + label.length;
+          const end = nextLabel ? text.indexOf(nextLabel) : text.length;
+          return text.substring(contentStart, end !== -1 ? end : text.length).trim();
+        }
 
-        sections.forEach((section, i) => {
-          const nextSection = sections[i + 1];
-          let content = '';
-          const startIdx = text.indexOf(section);
-          if (startIdx !== -1) {
-            const contentStart = startIdx + section.length;
-            const endIdx = nextSection ? text.indexOf(nextSection) : text.length;
-            content = text.substring(contentStart, endIdx).trim();
-          }
-          const isLast = i === sections.length - 1;
-          html += `
-            <div class="result-section ${isLast ? 'result-section-highlight' : ''}">
-              <div class="result-section-label">${section}</div>
-              <div class="result-section-text">${content}</div>
-            </div>
-          `;
-        });
-
-        bodyEl.innerHTML = html;
+        document.getElementById('resultsMeaning').textContent = extractSection('WHAT THIS MEANS', 'WHAT IS BLOCKING YOU');
+        document.getElementById('resultsBlocking').textContent = extractSection('WHAT IS BLOCKING YOU', 'START HERE');
+        document.getElementById('resultsAction').textContent = extractSection('START HERE', null);
 
       } catch (err) {
         document.getElementById('assessmentLoading').style.display = 'none';
         document.getElementById('assessmentResults').style.display = 'block';
-        document.getElementById('resultsBody').innerHTML = '<p style="padding:24px;">Something went wrong. Please try again or contact us directly.</p>';
+        document.getElementById('resultsMeaning').textContent = 'Something went wrong. Please try again or contact us directly.';
         console.error(err);
       }
     }
