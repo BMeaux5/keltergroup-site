@@ -4,6 +4,7 @@ title: "AI Doesn't Change the Fundamentals"
 date: 2026-02-01
 category: "AI + Strategy"
 excerpt: "Everyone is so excited about AI they can't stop thinking and talking about it. But they are so afraid of missing the boat on implementation, they are trying to implement without a real solution in mind."
+extra_css: insights.css
 ---
 
 Everyone is so excited about AI they can't stop thinking and talking about it. But they are so afraid of missing the boat on implementation, they are trying to implement without a real solution in mind.
