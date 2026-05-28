@@ -6,42 +6,42 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://keltergroup.com/about.html</loc>
+    <loc>https://keltergroup.com/about</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://keltergroup.com/services.html</loc>
+    <loc>https://keltergroup.com/services</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://keltergroup.com/insights.html</loc>
+    <loc>https://keltergroup.com/insights</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://keltergroup.com/contact.html</loc>
+    <loc>https://keltergroup.com/contact</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://keltergroup.com/assessment.html</loc>
+    <loc>https://keltergroup.com/assessment</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://keltergroup.com/insights/interim-leader.html</loc>
+    <loc>https://keltergroup.com/insights/interim-leader/</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://keltergroup.com/insights/pressure-perspective.html</loc>
+    <loc>https://keltergroup.com/insights/pressure-perspective/</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://keltergroup.com/insights/ai-fundamentals.html</loc>
+    <loc>https://keltergroup.com/insights/ai-fundamentals/</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
