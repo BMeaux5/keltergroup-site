@@ -4,6 +4,7 @@ title: "Pressure Narrows Perspective"
 date: 2026-03-13
 category: "Leadership"
 excerpt: "Even strong organizations. Even experienced leadership teams. Awareness doesn't create immunity. When pressure rises, patterns emerge."
+extra_css: insights.css
 ---
 
 Even strong organizations. Even experienced leadership teams. Awareness doesn't create immunity.
