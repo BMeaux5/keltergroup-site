@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<section class="article-page">
+  <div class="article-page-inner">
+
+    <a href="/insights.html" class="article-back">&larr; Back to Insights</a>
+
+    <div class="article-page-meta">
+      <span class="article-tag">{{ page.category }}</span>
+      <span class="article-date">{{ page.date | date: "%B %-d, %Y" }}</span>
+    </div>
+
+    <h1 class="article-page-title">{{ page.title }}</h1>
+
+    <p class="article-page-lead">{{ page.excerpt }}</p>
+
+    <div class="article-body">
+      {{ content }}
+    </div>
+
+    <div class="article-author">
+      <div>
+        <div class="article-author-name">Brandon Morgan, MBA</div>
+        <div class="article-author-title">Founder, Kelter Group</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta-sec">
+  <div class="eyebrow cta-eyebrow">Work With Brandon</div>
+  <h2 class="sec-title">Ready to build something that holds?</h2>
+  <p class="cta-sub">Most engagements start with a conversation. No pitch deck. No obligation.</p>
+  <div class="cta-btns">
+    <a href="/contact.html" class="btn-primary">Start a Conversation</a>
+    <a href="/insights.html" class="btn-ghost">More Insights</a>
+  </div>
+</section>
