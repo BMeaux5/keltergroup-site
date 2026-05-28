@@ -485,7 +485,7 @@ footer {
   padding: 140px 48px 80px;
   border-bottom: 3px solid var(--slate);
 }
-.page-hero-inner { max-width: 800px; }
+.page-hero-inner { max-width: 720px; margin: 0 auto;}
 .page-hero .eyebrow { color: rgba(255,255,255,0.4); margin-bottom:16px; }
 .page-hero .eyebrow::before { background: rgba(255,255,255,0.3); }
 .page-title {
