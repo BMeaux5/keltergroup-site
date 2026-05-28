@@ -4,6 +4,7 @@ title: "Navigating the Hybrid Role: Interim Leader and Consultant"
 date: 2026-01-01
 category: "Leadership"
 excerpt: "How does a consultant manage two roles that are fundamentally at odds with one another? The answer requires knowing when to act in each role, sometimes multiple times in a single meeting."
+extra_css: insights.css
 ---
 
 Companies like to squeeze as much as they can out of all opportunities, so sometimes they ask people to fill two roles at the same time. More and more, consultants are filling hybrid roles and acting as interim leaders during their engagement. While an interim leader and a consultant are different, there is a lot of cross-over. This can create challenges when the two positions they are asked to fill are fundamentally different. This means that a person must know when to act in each role and what the differences are. Sometimes this is day by day, but sometimes it can be multiple times during the same one-hour meeting.
