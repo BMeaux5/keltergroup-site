@@ -2,17 +2,22 @@
 layout: default
 ---
 
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="eyebrow">{{ page.category }}</div>
+    <h1 class="page-title">{{ page.title }}</h1>
+  </div>
+</section>
+
 <section class="article-page">
   <div class="article-page-inner">
 
-    <a href="/insights.html" class="article-back">&larr; Back to Insights</a>
+    <a href="/insights" class="article-back">&larr; Back to Insights</a>
 
     <div class="article-page-meta">
       <span class="article-tag">{{ page.category }}</span>
       <span class="article-date">{{ page.date | date: "%B %-d, %Y" }}</span>
     </div>
-
-    <h1 class="article-page-title">{{ page.title }}</h1>
 
     <div class="article-body">
       {{ content }}
