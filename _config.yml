@@ -1,0 +1,27 @@
+title: Kelter Group
+description: Founder-led operational consulting. Less chaos. Better systems. Outcomes that hold.
+url: https://keltergroup.com
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: /insights/:title/
+
+# Exclude files from Jekyll build
+exclude:
+  - README.txt
+  - LICENSE.txt
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /insights/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: article
