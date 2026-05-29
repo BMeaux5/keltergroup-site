@@ -96,9 +96,13 @@
             <label for="source">How did you hear about Kelter Group? (optional)</label>
             <input type="text" id="source" name="source" placeholder="Referral, LinkedIn, Google...">
           </div>
+          
           <button type="submit" class="btn-primary form-submit">Send Message</button>
         </form>
-
+<div style="display:none;" aria-hidden="true">
+  <label for="website">Website</label>
+  <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+</div>
         <div class="form-success" id="formSuccess">
           <div class="success-icon">&#10003;</div>
           <h3>Message received.</h3>
@@ -207,7 +211,11 @@
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
-
+    
+    // Honeypot check — if filled, it's a bot
+const honeypot = form.querySelector('#website').value;
+  if (honeypot) return;
+    
     const data = {
       name: form.querySelector('#name').value,
       company: form.querySelector('#company').value,
