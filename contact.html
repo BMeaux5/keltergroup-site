@@ -93,8 +93,8 @@
             <textarea id="message" name="message" required rows="5" placeholder="Tell me what's going on. What are you trying to solve?"></textarea>
           </div>
           <div class="form-group">
-            <label for="source">How did you hear about Kelter Group? (optional)</label>
-            <input type="text" id="source" name="source" placeholder="Referral, LinkedIn, Google...">
+            <label for="referral">How did you hear about Kelter Group? (optional)</label>
+            <input type="text" id="source" name="referral" placeholder="Referral, LinkedIn, Google...">
           </div>
           
           <button type="submit" class="btn-primary form-submit">Send Message</button>
@@ -223,7 +223,7 @@ const data = {
   phone: form.querySelector('#phone').value,
   inquiry_type: form.querySelector('#inquiry_type').value,
   message: form.querySelector('#message').value,
-  source: form.querySelector('#source').value,  // ← this is the "how did you hear" field
+  source: form.querySelector('#referral').value,  // ← this is the "how did you hear" field
   website: form.querySelector('#website').value  // ← this is the honeypot
 };
 
