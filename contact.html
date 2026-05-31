@@ -216,15 +216,16 @@
 const honeypot = form.querySelector('#website').value;
   if (honeypot) return;
     
-    const data = {
-      name: form.querySelector('#name').value,
-      company: form.querySelector('#company').value,
-      email: form.querySelector('#email').value,
-      phone: form.querySelector('#phone').value,
-      inquiry_type: form.querySelector('#inquiry_type').value,
-      message: form.querySelector('#message').value,
-      source: form.querySelector('#source').value
-    };
+const data = {
+  name: form.querySelector('#name').value,
+  company: form.querySelector('#company').value,
+  email: form.querySelector('#email').value,
+  phone: form.querySelector('#phone').value,
+  inquiry_type: form.querySelector('#inquiry_type').value,
+  message: form.querySelector('#message').value,
+  source: form.querySelector('#source').value,  // ← this is the "how did you hear" field
+  website: form.querySelector('#website').value  // ← this is the honeypot
+};
 
     try {
       await fetch('https://default70f40da099aa40fc8e619406d53f1d.9c.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/71d1b4060473427a84b5f2ed631a9567/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Gq6YBakqrwSZqa44kRPLf1WzqyHuM0k93sv_bKG8Nw0', {
