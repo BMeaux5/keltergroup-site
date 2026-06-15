@@ -716,3 +716,43 @@ footer {
   font-weight: 300;
   color: var(--text-muted);
 }
+.proof-cases {
+  padding: 80px 24px;
+  background: #1B3A5C;
+  color: #fff;
+}
+
+.proof-cases-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.proof-cases .eyebrow {
+  color: #4A6FA5;
+}
+
+.proof-cases .sec-title {
+  color: #fff;
+  margin-bottom: 48px;
+}
+
+.proof-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+}
+
+.proof-case-industry {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #4A6FA5;
+  margin-bottom: 12px;
+}
+
+.proof-case-result {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #e0ddd8;
+}
